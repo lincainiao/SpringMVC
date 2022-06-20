@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe无刷新</title>
+    <script>
+        function go(){
+            // 所有的值和变量，提前获取
+            let url01 = document.getElementById("url01").value;
+            document.getElementById("iframe01").src=url01;
+        }
+    </script>
+</head>
+<body>
+<div>
+    <p>请输入地址：</p>
+    <input type="text" id="url01" name="url" value="https://t.bilibili.com/?spm_id_from=333.1007.0.0">
+    <!--绑定事件-->
+    <input type="button" value="提交" onclick="go()">
+</div>
+
+<div>
+    <iframe id="iframe01" style="width: 100%;height: 500px"></iframe>
+</div>
+</body>
+</html>
